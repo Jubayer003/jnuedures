@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>জগন্নাথ বিশ্ববিদ্যালয় শিক্ষার্থীদের চ্যালেঞ্জ ও সমাধান</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Hind Siliguri', sans-serif;
+      background-color: #f0f4f8;
+    }
+    .chart-container {
+      position: relative;
+      width: 100%;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      height: 300px;
+      max-height: 400px;
+    }
+    @media (min-width: 768px) {
+      .chart-container {
+        height: 350px;
+      }
+    }
+    .stat-card h3 {
+      color: #d45087;
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, #d45087, #f95d6a, #ff7c43);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <div class="container mx-auto p-4 md:p-8">
+
+    <header class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold mb-2 gradient-text">জগন্নাথ বিশ্ববিদ্যালয়</h1>
+      <p class="text-xl md:text-2xl text-gray-600">রিসার্চ এবং ইন্টার্নশীপের ক্ষেত্রে শিক্ষার্থীদের চ্যালেঞ্জ ও সমাধান</p>
+    </header>
+
+    <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <section class="md:col-span-2 lg:col-span-3 bg-white rounded-lg shadow-lg p-6">
+        <h2 class="text-2xl font-bold text-center text-gray-700 mb-4">ভূমিকা</h2>
+        <p class="text-center max-w-3xl mx-auto">
+          বিশ্ববিদ্যালয়ের প্রতিটি শিক্ষার্থীর স্বপ্ন থাকে উজ্জ্বল ভবিষ্যতের, কিন্তু কিছু সাধারণ সমস্যা এই যাত্রাকে কঠিন করে তোলে। আমি মোঃ শাহরিয়ার যুবায়ের এবং আমার টিম মিলে বিভিন্ন জরিপ ও গবেষণার আলোকে জগন্নাথ বিশ্ববিদ্যালয়ের শিক্ষার্থীদের প্রধান তিনটি চ্যালেঞ্জ এবং এর কার্যকরী সমাধানগুলো তুলে ধরছি।
+        </p>
+      </section>
+
+      <div class="stat-card bg-white rounded-lg shadow-lg p-6 flex flex-col justify-center items-center text-center">
+        <h3 class="text-6xl font-bold mb-2">৭০%</h3>
+        <p class="font-semibold text-gray-700">শিক্ষার্থী গবেষণার জন্য সঠিক নির্দেশনা পায় না।</p>
+        <p class="text-sm text-gray-500 mt-2">(সূত্র: এডুকেশন ওয়াচ রিপোর্ট)</p>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg p-6 md:col-span-2">
+        <h2 class="text-xl font-bold text-center mb-4">১. গবেষণায় আগ্রহ থাকা সত্ত্বেও সঠিক নির্দেশনার অভাব</h2>
+        <p class="text-center mb-6">
+          অনেক শিক্ষার্থীর গবেষণা করার প্রবল ইচ্ছা থাকলেও প্রয়োজনীয় রিসোর্স, ফান্ডিং এবং সবচেয়ে গুরুত্বপূর্ণভাবে, সঠিক নির্দেশনার অভাবে তারা পিছিয়ে পড়ে।
+        </p>
+        <div class="chart-container">
+          <canvas id="researchChart"></canvas>
+        </div>
+        <p class="text-center text-sm mt-4 text-gray-600">এই চার্টটি দেখায় যে সিংহভাগ শিক্ষার্থী গবেষণার ক্ষেত্রে পর্যাপ্ত সহযোগিতা থেকে বঞ্চিত।</p>
+
+        <div class="mt-6 pt-4 border-t-2 border-dashed">
+          <h3 class="text-lg font-bold text-center mb-3 text-green-700">আমার পরিকল্পনা ও সমাধান</h3>
+          <div class="bg-green-50 p-4 rounded-lg flex items-center">
+            <span class="text-3xl mr-4" aria-hidden="true">🔬</span>
+            <div>
+              <p class="font-semibold">নিয়মিত ‘রিসার্চ মেথডলজি’ বিষয়ক ওয়ার্কশপ আয়োজন করে শিক্ষার্থীদের গবেষণার প্রতিটি ধাপে দক্ষ করে তোলা হবে, যা তাদের অ্যাকাডেমিক ও পেশাগত জীবনে এগিয়ে রাখবে।</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stat-card bg-white rounded-lg shadow-lg p-6 flex flex-col justify-center items-center text-center">
+        <h3 class="text-6xl font-bold mb-2">৪৭%</h3>
+        <p class="font-semibold text-gray-700">স্নাতক ডিগ্রি অর্জনের এক বছর পরেও বেকার থাকেন।</p>
+        <p class="text-sm text-gray-500 mt-2">(সূত্র: বাংলাদেশ উন্নয়ন গবেষণা প্রতিষ্ঠান)</p>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg p-6 md:col-span-2">
+        <h2 class="text-xl font-bold text-center mb-4">২. ইন্টার্নশিপ ও কর্মক্ষেত্রের প্রস্তুতির ঘাটতি</h2>
+        <p class="text-center mb-6">
+          বাস্তব অভিজ্ঞতার অভাবে অনেক মেধাবী শিক্ষার্থীও চাকরির বাজারে নিজেদের মেলে ধরতে পারে না। প্রথম বর্ষ থেকে ইন্টার্নশিপের সুযোগ পেলে তারা কর্মক্ষেত্রের জন্য আরও প্রস্তুত হতে পারত।
+        </p>
+        <div class="chart-container" style="max-width: 600px; height: 350px;">
+          <canvas id="internshipChart"></canvas>
+        </div>
+        <p class="text-center text-sm mt-4 text-gray-600">এই পরিসংখ্যানটি স্নাতকদের চাকরির বাজারের জন্য প্রয়োজনীয় দক্ষতার ঘাটতি তুলে ধরে।</p>
+
+        <div class="mt-6 pt-4 border-t-2 border-dashed">
+          <h3 class="text-lg font-bold text-center mb-3 text-green-700">আমার পরিকল্পনা ও সমাধান</h3>
+          <div class="bg-green-50 p-4 rounded-lg flex items-center">
+            <span class="text-3xl mr-4" aria-hidden="true">💼</span>
+            <div>
+              <p class="font-semibold">একটি বিশেষ টিম গঠন করে বিভিন্ন কোম্পানির সাথে যোগাযোগের মাধ্যমে প্রথম বর্ষ থেকেই শিক্ষার্থীদের জন্য পেইড ও আনপেইড ইন্টার্নশিপের সুযোগ তৈরি করা হবে।</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stat-card bg-white rounded-lg shadow-lg p-6 flex flex-col justify-center items-center text-center">
+        <h3 class="text-6xl font-bold mb-2">৬০%</h3>
+        <p class="font-semibold text-gray-700">সঠিক তথ্যের অভাবে অ্যাকাডেমিক বা বৃত্তির সুযোগ হাতছাড়া করে।</p>
+        <p class="text-sm text-gray-500 mt-2">(সূত্র: সাম্প্রতিক শিক্ষার্থী জরিপ)</p>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg p-6 md:col-span-2">
+        <h2 class="text-xl font-bold text-center mb-4">৩. প্রাতিষ্ঠানিক তথ্যের সমন্বয়হীনতা</h2>
+        <p class="text-center mb-6">
+          বিশ্ববিদ্যালয়ের বিভিন্ন নোটিশ বা সুযোগের তথ্যগুলো একটি কেন্দ্রীয় প্ল্যাটফর্মে না থাকায় শিক্ষার্থীরা প্রায়ই গুরুত্বপূর্ণ তথ্য সময়মতো পায় না।
+        </p>
+
+        <div class="flex flex-col md:flex-row justify-around items-center text-center p-4">
+          <div class="w-full md:w-1/2 mb-6 md:mb-0">
+            <h4 class="font-bold mb-2">বর্তমান ব্যবস্থা</h4>
+            <div class="border-2 border-red-300 rounded-lg p-4 bg-red-50">
+              <p class="p-2 m-1 bg-white rounded shadow">বিভাগের নোটিশ</p>
+              <p class="p-2 m-1 bg-white rounded shadow">কেন্দ্রীয় ওয়েবসাইট</p>
+              <p class="p-2 m-1 bg-white rounded shadow">ফেসবুক গ্রুপ</p>
+            </div>
+          </div>
+          <div class="text-3xl text-gray-400 mx-4 hidden md:block">&rarr;</div>
+          <div class="text-3xl text-gray-400 my-2 md:hidden">&darr;</div>
+          <div class="w-full md:w-1/2">
+            <h4 class="font-bold mb-2">প্রস্তাবিত সমাধান</h4>
+            <div class="border-2 border-green-300 rounded-lg p-4 bg-green-50">
+              <div class="p-8 m-1 bg-white rounded shadow font-bold text-green-700">সেন্ট্রাল স্টুডেন্ট পোর্টাল</div>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-center text-sm mt-4 text-gray-600">একটি সমন্বিত পোর্টাল তথ্যের প্রবাহকে সহজ করতে পারে।</p>
+
+        <div class="mt-6 pt-4 border-t-2 border-dashed">
+          <h3 class="text-lg font-bold text-center mb-3 text-green-700">আমার পরিকল্পনা ও সমাধান</h3>
+          <div class="bg-green-50 p-4 rounded-lg flex items-center">
+            <span class="text-3xl mr-4" aria-hidden="true">💻</span>
+            <div>
+              <p class="font-semibold">সকল নোটিশ, বৃত্তির খবর ও অ্যাকাডেমিক তথ্য একত্রিত করে একটি সেন্ট্রাল স্টুডেন্ট পোর্টাল তৈরি করা হবে, যেখানে শিক্ষার্থীরা এক ক্লিকেই সব তথ্য পাবে।</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="text-center mt-12 py-6 border-t">
+      <h2 class="text-2xl font-bold mb-4">সমাধানের পথে আমাদের পদক্ষেপ</h2>
+      <div class="flex flex-wrap justify-center gap-4">
+        <span class="bg-teal-100 text-teal-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">নিয়মিত রিসার্চ ওয়ার্কশপ</span>
+        <span class="bg-purple-100 text-purple-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">ইন্টার্নশিপ সহায়তা টিম</span>
+        <span class="bg-orange-100 text-orange-800 text-sm font-semibold mr-2 px-3 py-1 rounded-full">কেন্দ্রীয় স্টুডেন্ট পোর্টাল</span>
+      </div>
+      <p class="mt-6 text-gray-600">সঠিক উদ্যোগ এবং সম্মিলিত প্রচেষ্টাই পারে এই চ্যালেঞ্জগুলোকে সম্ভাবনায় রূপ দিতে।</p>
+    </footer>
+  </div>
+
+  <script>
+    const chartTooltipCallback = {
+      plugins: {
+        tooltip: {
+          callbacks: {
+            title: function(tooltipItems) {
+              const item = tooltipItems[0];
+              let label = item.chart.data.labels[item.dataIndex];
+              return Array.isArray(label) ? label.join(' ') : label;
+            }
+          }
+        }
+      }
+    };
+
+    // Research Chart
+    const researchCtx = document.getElementById('researchChart').getContext('2d');
+    new Chart(researchCtx, {
+      type: 'doughnut',
+      data: {
+        labels: ['সঠিক নির্দেশনার অভাব', 'পর্যাপ্ত নির্দেশনা পান'],
+        datasets: [{
+          label: 'শিক্ষার্থীদের মতামত',
+          data: [70, 30],
+          backgroundColor: ['#ff7c43', '#ffa600'],
+          borderColor: '#ffffff',
+          borderWidth: 3
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          ...chartTooltipCallback.plugins,
+          legend: { position: 'bottom' },
+          title: {
+            display: true,
+            text: 'গবেষণার ক্ষেত্রে শিক্ষার্থীদের প্রাপ্ত সহযোগিতা',
+            font: { size: 16 }
+          }
+        }
+      }
+    });
+
+    // Internship Chart
+    const internshipCtx = document.getElementById('internshipChart').getContext('2d');
+    new Chart(internshipCtx, {
+      type: 'bar',
+      data: {
+        labels: ['যোগাযোগ দক্ষতা', 'সমস্যা সমাধান', 'কারিগরি দক্ষতা', 'টিমওয়ার্ক'],
+        datasets: [{
+          label: 'দক্ষতার ঘাটতি (নিয়োগকর্তাদের মতে)',
+          data: [65, 58, 52, 45],
+          backgroundColor: ['#d45087', '#f95d6a', '#ff7c43', '#ffa600'],
+          borderColor: '#ffffff',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          x: {
+            beginAtZero: true,
+            ticks: {
+              callback: function(value) {
+                return value + '%';
+              }
+            }
+          }
+        },
+        plugins: {
+          ...chartTooltipCallback.plugins,
+          legend: { display: false },
+          title: {
+            display: true,
+            text: 'স্নাতকদের মধ্যে দক্ষতার ঘাটতি',
+            font: { size: 16 }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
