@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>জগন্নাথ বিশ্ববিদ্যালয় শিক্ষার্থীদের চ্যালেঞ্জ ও সমাধান</title>
 
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
@@ -38,6 +41,30 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+    /* Styles for the new form */
+    .idea-box {
+        background: linear-gradient(145deg, #ffffff, #e6e9ee);
+        border: none;
+        transition: all 0.3s ease-in-out;
+    }
+    .form-input {
+        border: 2px solid transparent;
+        background-color: #f0f4f8;
+        transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    .form-input:focus {
+        border-color: #f95d6a;
+        box-shadow: 0 0 0 3px rgba(249, 93, 106, 0.3);
+        outline: none;
+    }
+    .submit-btn {
+        background: linear-gradient(90deg, #d45087, #f95d6a, #ff7c43);
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .submit-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
   </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
@@ -51,6 +78,7 @@
 
     <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
+      <!-- ভূমিকা -->
       <section class="md:col-span-2 lg:col-span-3 bg-white rounded-lg shadow-lg p-6">
         <h2 class="text-2xl font-bold text-center text-gray-700 mb-4">ভূমিকা</h2>
         <p class="text-center max-w-3xl mx-auto">
@@ -58,6 +86,7 @@
         </p>
       </section>
 
+      <!-- চ্যালেঞ্জ ১ -->
       <div class="stat-card bg-white rounded-lg shadow-lg p-6 flex flex-col justify-center items-center text-center">
         <h3 class="text-6xl font-bold mb-2">৭০%</h3>
         <p class="font-semibold text-gray-700">শিক্ষার্থী গবেষণার জন্য সঠিক নির্দেশনা পায় না।</p>
@@ -85,6 +114,7 @@
         </div>
       </div>
 
+      <!-- চ্যালেঞ্জ ২ -->
       <div class="stat-card bg-white rounded-lg shadow-lg p-6 flex flex-col justify-center items-center text-center">
         <h3 class="text-6xl font-bold mb-2">৪৭%</h3>
         <p class="font-semibold text-gray-700">স্নাতক ডিগ্রি অর্জনের এক বছর পরেও বেকার থাকেন।</p>
@@ -112,6 +142,7 @@
         </div>
       </div>
 
+      <!-- চ্যালেঞ্জ ৩ -->
       <div class="stat-card bg-white rounded-lg shadow-lg p-6 flex flex-col justify-center items-center text-center">
         <h3 class="text-6xl font-bold mb-2">৬০%</h3>
         <p class="font-semibold text-gray-700">সঠিক তথ্যের অভাবে অ্যাকাডেমিক বা বৃত্তির সুযোগ হাতছাড়া করে।</p>
@@ -156,7 +187,30 @@
         </div>
       </div>
     </main>
+    
+    <!-- New Google Form Submission Section -->
+    <section class="mt-16 md:col-span-2 lg:col-span-3">
+        <div class="idea-box max-w-4xl mx-auto rounded-xl shadow-lg p-8 md:p-12 text-center">
+            <span class="text-5xl" aria-hidden="true">📬</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-4 gradient-text">আপনার কথা বলুন!</h2>
+            <p class="text-gray-600 mt-2 mb-8 max-w-xl mx-auto">আপনার যেকোনো সমস্যা বা পরামর্শ আমাদের জানান। প্রতিটি কণ্ঠস্বরই মূল্যবান এবং পরিবর্তনে সহায়ক।</p>
+            
+            <form id="google-form" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <input type="text" name="entry.1983297658" placeholder="আপনার নাম" class="form-input w-full p-4 rounded-lg" required>
+                    <input type="text" name="entry.1932824635" placeholder="আপনার বিভাগ" class="form-input w-full p-4 rounded-lg" required>
+                </div>
+                <textarea name="entry.1121950485" placeholder="আপনার সমস্যাটি বিস্তারিত লিখুন..." class="form-input w-full p-4 rounded-lg h-32 resize-none" required></textarea>
+                <textarea name="entry.197992928" placeholder="আপনার মতে সম্ভাব্য সমাধান কী হতে পারে? (ঐচ্ছিক)" class="form-input w-full p-4 rounded-lg h-24 resize-none"></textarea>
+                <button type="submit" class="submit-btn text-white font-bold py-4 px-10 rounded-full w-full md:w-auto text-lg">
+                    জমা দিন
+                </button>
+            </form>
+             <div id="form-feedback" class="mt-6 text-lg font-semibold" aria-live="polite"></div>
+        </div>
+    </section>
 
+    <!-- Footer -->
     <footer class="text-center mt-12 py-6 border-t">
       <h2 class="text-2xl font-bold mb-4">সমাধানের পথে আমাদের পদক্ষেপ</h2>
       <div class="flex flex-wrap justify-center gap-4">
@@ -168,7 +222,9 @@
     </footer>
   </div>
 
+  <!-- Scripts -->
   <script>
+    // Chart Scripts
     const chartTooltipCallback = {
       plugins: {
         tooltip: {
@@ -183,7 +239,6 @@
       }
     };
 
-    // Research Chart
     const researchCtx = document.getElementById('researchChart').getContext('2d');
     new Chart(researchCtx, {
       type: 'doughnut',
@@ -212,7 +267,6 @@
       }
     });
 
-    // Internship Chart
     const internshipCtx = document.getElementById('internshipChart').getContext('2d');
     new Chart(internshipCtx, {
       type: 'bar',
@@ -251,6 +305,40 @@
         }
       }
     });
+
+    // Google Form Submission Script
+    const form = document.getElementById('google-form');
+    const feedbackDiv = document.getElementById('form-feedback');
+    
+    // IMPORTANT: Replace with your actual Google Form Action URL
+    const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSeeYDJhfa_1xE_pkL5Tr-XHdamgWCDQmFXa5w4zyB4YYWpMtA/formResponse";
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      
+      // Show submitting message
+      feedbackDiv.textContent = 'আপনার বার্তা জমা হচ্ছে...';
+      feedbackDiv.style.color = '#ff7c43';
+
+      const formData = new FormData(form);
+
+      fetch(googleFormUrl, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors' // Important for avoiding CORS errors
+      })
+      .then(response => {
+        form.reset();
+        feedbackDiv.textContent = 'ধন্যবাদ! আপনার বার্তা সফলভাবে জমা হয়েছে।';
+        feedbackDiv.style.color = 'green';
+      })
+      .catch(error => {
+        console.error('Error!', error.message);
+        feedbackDiv.textContent = 'দুঃখিত, একটি সমস্যা হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন।';
+        feedbackDiv.style.color = 'red';
+      });
+    });
   </script>
 </body>
 </html>
+
